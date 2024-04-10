@@ -20,10 +20,12 @@
 
 // const Main = imports.ui.main;
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import {
+  Extension,
+  gettext as _,
+} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-export default class Extension {
-  constructor() {}
-
+export default class SwapFingerGesturesExt extends Extension {
   enable() {
     this._swipeMods = [
       Main.overview._swipeTracker._touchpadGesture,
